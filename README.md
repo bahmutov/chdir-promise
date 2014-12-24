@@ -10,10 +10,10 @@
 
 ```js
 var chdir = require('chdir-promise');
-// only has two methods: chdir.to and chdir.comeBack
+// only has two methods: chdir.to and chdir.back
 chdir.to('foo/bar/folder')
     // do something inside foo/bar/folder
-    .then(chdir.comeBack)
+    .then(chdir.back)
     .done();
 ```
 
@@ -24,7 +24,7 @@ if you need to return value before returning use `.tap` method
         .then(function () {
             return 'foo'; // value to return
         })
-        .tap(chdir.comeBack);
+        .tap(chdir.back);
         // resolved with value 'foo'
 ```
 

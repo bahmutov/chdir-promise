@@ -6,12 +6,12 @@ la(check.object(folders), 'expected folders to be an object', folders);
 la(check.fn(folders.to), 'expected folders.to to be a function', folders);
 
 folders.to(__dirname)
-  .then(folders.comeBack)
+  .then(folders.back)
   .then(folders.to(__dirname))
   .then(function () {
     return 'foo';
   })
-  .tap(folders.comeBack)
+  .tap(folders.back)
   .then(function (result) {
     la(result === 'foo', 'incorrect result', result);
   })
