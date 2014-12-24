@@ -9,21 +9,22 @@
 [![devdependencies][chdir-promise-devdependencies-image] ][chdir-promise-devdependencies-url]
 
 ```js
-var folders = require('chdir-promise');
-folders.to('foo/bar/folder')
+var chdir = require('chdir-promise');
+// only has two methods: chdir.to and chdir.comeBack
+chdir.to('foo/bar/folder')
     // do something inside foo/bar/folder
-    .then(folders.comeBack)
+    .then(chdir.comeBack)
     .done();
 ```
 
 if you need to return value before returning use `.tap` method
 
 ```js
-    folders.to('foo/bar/folder')
+    chdir.to('foo/bar/folder')
         .then(function () {
             return 'foo'; // value to return
         })
-        .tap(folders.comeBack);
+        .tap(chdir.comeBack);
         // resolved with value 'foo'
 ```
 
