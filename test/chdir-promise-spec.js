@@ -7,4 +7,12 @@ la(check.fn(folders.to), 'expected folders.to to be a function', folders);
 
 folders.to(__dirname)
   .then(folders.comeBack)
+  .then(folders.to(__dirname))
+  .then(function () {
+    return 'foo';
+  })
+  .tap(folders.comeBack)
+  .then(function (result) {
+    la(result === 'foo', 'incorrect result', result);
+  })
   .done();
