@@ -14,11 +14,11 @@ if you need to return value before returning use `.tap` method
 
 ```js
     folders.to('foo/bar/folder')
-    .then(function () {
-        return 'foo'; // value to return
-    })
-    .tap(folders.comeBack);
-    // resolved with value 'foo'
+        .then(function () {
+            return 'foo'; // value to return
+        })
+        .tap(folders.comeBack);
+        // resolved with value 'foo'
 ```
 
 Implemented using [q][q], [spots][spots], [lazy-ass][lazy-ass] and [check-more-types][check-more-types].
