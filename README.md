@@ -2,6 +2,12 @@
 
 > Change current working folder by returning a promise + a stack of folders to jump back
 
+[![NPM][chdir-promise-icon] ][chdir-promise-url]
+
+[![Build status][chdir-promise-ci-image] ][chdir-promise-ci-url]
+[![dependencies][chdir-promise-dependencies-image] ][chdir-promise-dependencies-url]
+[![devdependencies][chdir-promise-devdependencies-image] ][chdir-promise-devdependencies-url]
+
 ```js
 var folders = require('chdir-promise');
 folders.to('foo/bar/folder')
@@ -67,3 +73,12 @@ HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
 WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
 FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 OTHER DEALINGS IN THE SOFTWARE.
+
+[chdir-promise-icon]: https://nodei.co/npm/chdir-promise.png?downloads=true
+[chdir-promise-url]: https://npmjs.org/package/chdir-promise
+[chdir-promise-ci-image]: https://travis-ci.org/bahmutov/chdir-promise.png?branch=master
+[chdir-promise-ci-url]: https://travis-ci.org/bahmutov/chdir-promise
+[chdir-promise-dependencies-image]: https://david-dm.org/bahmutov/chdir-promise.png
+[chdir-promise-dependencies-url]: https://david-dm.org/bahmutov/chdir-promise
+[chdir-promise-devdependencies-image]: https://david-dm.org/bahmutov/chdir-promise/dev-status.png
+[chdir-promise-devdependencies-url]: https://david-dm.org/bahmutov/chdir-promise#info=devDependencies
