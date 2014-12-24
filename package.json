@@ -1,0 +1,37 @@
+{
+  "name": "chdir-promise",
+  "version": "0.0.0",
+  "description": "Change working dir and return a promise, a stack of folders is maintained to jump back",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bahmutov/chdir-promise.git"
+  },
+  "keywords": [
+    "chdir",
+    "change",
+    "directory",
+    "folder",
+    "promise",
+    "stack",
+    "folders",
+    "working",
+    "cwd"
+  ],
+  "author": "Gleb Bahmutov <gleb.bahmutov@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bahmutov/chdir-promise/issues"
+  },
+  "homepage": "https://github.com/bahmutov/chdir-promise",
+  "dependencies": {
+    "check-more-types": "1.1.0",
+    "check-types": "1.4.0",
+    "lazy-ass": "0.5.3",
+    "q": "1.1.2",
+    "spots": "0.3.0"
+  }
+}
