@@ -10,10 +10,10 @@
 
 ```js
 var chdir = require('chdir-promise');
-// only has two methods: chdir.to and chdir.back
+// only has two methods: chdir.to and chdir.from (alias chdir.back)
 chdir.to('foo/bar/folder')
     // do something inside foo/bar/folder
-    .then(chdir.back)
+    .then(chdir.back) // or chdir.from
     .done();
 ```
 

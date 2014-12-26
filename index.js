@@ -33,6 +33,7 @@ function comeBack() {
 
 module.exports = {
   to: S(q.try, _to, S),
-  back: comeBack
+  back: comeBack,
+  from: comeBack
 };
 
