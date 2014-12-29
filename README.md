@@ -20,15 +20,28 @@ chdir.to('foo/bar/folder')
 if you need to return value before returning use `.tap` method
 
 ```js
-    chdir.to('foo/bar/folder')
-        .then(function () {
-            return 'foo'; // value to return
-        })
-        .tap(chdir.back);
-        // resolved with value 'foo'
+chdir.to('foo/bar/folder')
+    .then(function () {
+        return 'foo'; // value to return
+    })
+    .tap(chdir.back);
+    // resolved with value 'foo'
 ```
 
 Implemented using [q][q], [spots][spots], [lazy-ass][lazy-ass] and [check-more-types][check-more-types].
+
+**Advice**
+
+Put `chdir.back` into `.finally` callback to make sure it is always executed, even if there is an exception.
+
+```js
+chdir.to('foo/bar/folder')
+    .then(function () {
+        throw new Error('oh my');
+    })
+    .then(chdir.back) // not called!
+    .finally(chdir.back); // called
+```
 
 [q]: https://www.npmjs.com/package/q
 [spots]: https://www.npmjs.com/package/spots

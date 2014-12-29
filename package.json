@@ -1,6 +1,6 @@
 {
   "name": "chdir-promise",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Change working dir and return a promise, a stack of folders is maintained to jump back",
   "main": "index.js",
   "scripts": {
