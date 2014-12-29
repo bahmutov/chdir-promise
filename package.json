@@ -28,7 +28,7 @@
   },
   "homepage": "https://github.com/bahmutov/chdir-promise",
   "dependencies": {
-    "check-more-types": "1.1.0",
+    "check-more-types": "1.1.1",
     "check-types": "1.4.0",
     "lazy-ass": "0.5.3",
     "q": "1.1.2",
