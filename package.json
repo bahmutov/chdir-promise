@@ -32,7 +32,7 @@
     "check-types": "1.4.0",
     "lazy-ass": "0.5.3",
     "q": "1.1.2",
-    "spots": "0.3.0"
+    "spots": "0.4.0"
   },
   "devDependencies": {
     "pre-git": "0.1.1"
