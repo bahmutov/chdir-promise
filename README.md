@@ -5,8 +5,7 @@
 [![NPM][chdir-promise-icon] ][chdir-promise-url]
 
 [![Build status][chdir-promise-ci-image] ][chdir-promise-ci-url]
-[![dependencies][chdir-promise-dependencies-image] ][chdir-promise-dependencies-url]
-[![devdependencies][chdir-promise-devdependencies-image] ][chdir-promise-devdependencies-url]
+[![semantic-release][semantic-image] ][semantic-url]
 
 ```js
 var chdir = require('chdir-promise');
@@ -53,8 +52,8 @@ chdir.to('foo/bar/folder')
 Author: Gleb Bahmutov &copy; 2014
 
 * [@bahmutov](https://twitter.com/bahmutov)
-* [glebbahmutov.com](http://glebbahmutov.com)
-* [blog](http://bahmutov.calepin.co/)
+* [glebbahmutov.com](https://glebbahmutov.com)
+* [blog](https://glebbahmutov.com/blog/)
 
 License: MIT - do anything with the code, but don't blame me if it does not work.
 
@@ -92,7 +91,5 @@ OTHER DEALINGS IN THE SOFTWARE.
 [chdir-promise-url]: https://npmjs.org/package/chdir-promise
 [chdir-promise-ci-image]: https://travis-ci.org/bahmutov/chdir-promise.png?branch=master
 [chdir-promise-ci-url]: https://travis-ci.org/bahmutov/chdir-promise
-[chdir-promise-dependencies-image]: https://david-dm.org/bahmutov/chdir-promise.png
-[chdir-promise-dependencies-url]: https://david-dm.org/bahmutov/chdir-promise
-[chdir-promise-devdependencies-image]: https://david-dm.org/bahmutov/chdir-promise/dev-status.png
-[chdir-promise-devdependencies-url]: https://david-dm.org/bahmutov/chdir-promise#info=devDependencies
+[semantic-image]: https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg
+[semantic-url]: https://github.com/semantic-release/semantic-release

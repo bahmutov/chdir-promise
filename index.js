@@ -3,6 +3,7 @@ var check = require('check-more-types');
 var q = require('q');
 var fs = require('fs');
 var S = require('spots');
+var debug = require('debug')('chdir-promise');
 
 // stack
 var folders = [];
@@ -14,7 +15,7 @@ function _to(folderName) {
   var current = process.cwd();
   la(check.unemptyString(folderName), 'missing folder');
   process.chdir(folderName);
-  console.log('in folder', process.cwd());
+  debug('chdir to folder', process.cwd());
 
   folders.push(current);
 
@@ -27,7 +28,7 @@ function comeBack() {
   }
   var folder = folders.pop();
   process.chdir(folder);
-  console.log('restored folder', folder);
+  debug('restored folder', folder);
   return folder;
 }
 

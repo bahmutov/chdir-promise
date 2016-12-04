@@ -1,10 +1,11 @@
 {
   "name": "chdir-promise",
-  "version": "0.2.1",
+  "version": "0.0.0-development",
   "description": "Change working dir and return a promise, a stack of folders is maintained to jump back",
   "main": "index.js",
   "scripts": {
-    "test": "node test/chdir-promise-spec.js"
+    "test": "node test/chdir-promise-spec.js",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "repository": {
     "type": "git",
@@ -30,12 +31,14 @@
   "dependencies": {
     "check-more-types": "1.1.1",
     "check-types": "1.4.0",
+    "debug": "^2.3.3",
     "lazy-ass": "0.5.3",
     "q": "1.1.2",
     "spots": "0.4.0"
   },
   "devDependencies": {
-    "pre-git": "0.1.1"
+    "pre-git": "0.1.1",
+    "semantic-release": "^6.3.2"
   },
   "pre-commit": "npm test"
 }
