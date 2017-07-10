@@ -43,7 +43,7 @@
   "devDependencies": {
     "github-post-release": "^1.7.1",
     "pre-git": "3.15.0",
-    "semantic-release": "6.3.6"
+    "semantic-release": "^6.3.6"
   },
   "config": {
     "pre-git": {
