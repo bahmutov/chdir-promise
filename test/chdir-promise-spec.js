@@ -1,6 +1,8 @@
 var la = require('lazy-ass');
 var check = require('check-more-types');
 var folders = require('..');
+var join = require('path').join;
+var parentFolder = join(process.cwd(), '..')
 
 la(check.object(folders), 'expected folders to be an object', folders);
 la(check.fn(folders.to), 'expected folders.to to be a function', folders);
@@ -18,3 +20,10 @@ folders.to(__dirname)
     la(result === 'foo', 'incorrect result', result);
   })
   .done();
+
+// .back() returns a promise
+folders.to(parentFolder)
+  .then(function () {
+    return folders.back()
+      .then(function () {})
+  }).done();
