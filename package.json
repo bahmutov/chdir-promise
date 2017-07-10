@@ -41,6 +41,7 @@
     "spots": "0.5.0"
   },
   "devDependencies": {
+    "github-post-release": "^1.7.1",
     "pre-git": "3.15.0",
     "semantic-release": "6.3.6"
   },
@@ -57,5 +58,8 @@
       "post-checkout": [],
       "post-merge": []
     }
+  },
+  "release": {
+    "generateNotes": "github-post-release"
   }
 }
