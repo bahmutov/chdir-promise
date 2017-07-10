@@ -27,7 +27,8 @@ chdir.to('foo/bar/folder')
     // resolved with value 'foo'
 ```
 
-Implemented using [q][q], [spots][spots], [lazy-ass][lazy-ass] and [check-more-types][check-more-types].
+Implemented using [q][q], [spots][spots], [lazy-ass][lazy-ass] and
+[check-more-types][check-more-types].
 
 **Advice**
 
@@ -87,9 +88,9 @@ WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
 FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 OTHER DEALINGS IN THE SOFTWARE.
 
-[chdir-promise-icon]: https://nodei.co/npm/chdir-promise.png?downloads=true
+[chdir-promise-icon]: https://nodei.co/npm/chdir-promise.svg?downloads=true
 [chdir-promise-url]: https://npmjs.org/package/chdir-promise
-[chdir-promise-ci-image]: https://travis-ci.org/bahmutov/chdir-promise.png?branch=master
+[chdir-promise-ci-image]: https://travis-ci.org/bahmutov/chdir-promise.svg?branch=master
 [chdir-promise-ci-url]: https://travis-ci.org/bahmutov/chdir-promise
 [semantic-image]: https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg
 [semantic-url]: https://github.com/semantic-release/semantic-release
