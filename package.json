@@ -16,7 +16,8 @@
     "prelint": "npm run pretty",
     "lint": "standard --verbose --fix *.js src/*.js test/*.js",
     "pretest": "npm run lint",
-    "issues": "git-issues"
+    "issues": "git-issues",
+    "unused-deps": "dependency-check --unused --no-dev ."
   },
   "repository": {
     "type": "git",
@@ -46,8 +47,7 @@
     "bluebird": "^3.5.1",
     "check-more-types": "2.24.0",
     "debug": "3.1.0",
-    "lazy-ass": "1.6.0",
-    "spots": "0.5.0"
+    "lazy-ass": "1.6.0"
   },
   "devDependencies": {
     "dependency-check": "2.9.1",
@@ -68,6 +68,7 @@
       ],
       "pre-push": [
         "npm run deps",
+        "npm run unused-deps",
         "npm run size"
       ],
       "post-commit": [],
