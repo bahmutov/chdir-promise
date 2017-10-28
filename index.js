@@ -1,22 +1,23 @@
-var la = require('lazy-ass')
-var check = require('check-more-types')
+'use strict'
 
-var q = require('q')
-var fs = require('fs')
-var S = require('spots')
-var debug = require('debug')('chdir-promise')
+const Promise = require('bluebird')
+const la = require('lazy-ass')
+const is = require('check-more-types')
+
+const exists = require('fs').existsSync
+const debug = require('debug')('chdir-promise')
 
 // stack
-var folders = []
+const folders = []
 
 function _to (folderName) {
-  la(check.unemptyString(folderName), 'missing git repo folder')
-  la(fs.existsSync(folderName), 'cannot find folder', folderName)
+  la(is.unemptyString(folderName), 'missing git repo folder')
+  la(exists(folderName), 'cannot find folder', folderName)
 
-  var current = process.cwd()
-  la(check.unemptyString(folderName), 'missing folder')
+  const current = process.cwd()
+  la(is.unemptyString(folderName), 'missing folder')
   process.chdir(folderName)
-  debug('chdir to folder', process.cwd())
+  debug('chdir jumped to folder', process.cwd())
 
   folders.push(current)
 
@@ -24,17 +25,23 @@ function _to (folderName) {
 }
 
 function comeBack () {
-  if (!folders.length) {
+  if (is.empty(folders)) {
     return Promise.resolve()
   }
-  var folder = folders.pop()
+  const folder = folders.pop()
   process.chdir(folder)
   debug('restored folder', folder)
   return Promise.resolve(folder)
 }
 
+const chdirTo = folderName => {
+  return Promise.try(() => {
+    return _to(folderName)
+  })
+}
+
 module.exports = {
-  to: S(q.try, _to, S),
+  to: chdirTo,
   back: comeBack,
   from: comeBack
 }
