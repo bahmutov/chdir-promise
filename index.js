@@ -35,9 +35,7 @@ function comeBack () {
 }
 
 const chdirTo = folderName => {
-  return Promise.try(() => {
-    return _to(folderName)
-  })
+  return Promise.try(() => _to(folderName))
 }
 
 module.exports = {
