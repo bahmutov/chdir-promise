@@ -67,4 +67,31 @@ describe('chdir-promise', () => {
         })
     })
   })
+
+  context('nextTo', () => {
+    it('is a function', () => {
+      la(is.fn(chdir.nextTo))
+    })
+
+    it('helps hop twice', () =>
+      chdir
+        .to(__dirname)
+        .then(here)
+        .then(chdir.back)
+        .then(inOriginal)
+        .then(chdir.nextTo(__dirname))
+        .then(here)
+        .then(chdir.back)
+        .then(inOriginal))
+
+    it('helps hop twice and twice back', () =>
+      chdir
+        .to(__dirname)
+        .then(chdir.nextTo(originalFolder))
+        .then(inOriginal)
+        .then(chdir.back)
+        .then(here)
+        .then(chdir.back)
+        .then(inOriginal))
+  })
 })

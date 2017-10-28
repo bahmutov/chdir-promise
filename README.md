@@ -27,9 +27,6 @@ chdir.to('foo/bar/folder')
     // resolved with value 'foo'
 ```
 
-Implemented using [q][q], [spots][spots], [lazy-ass][lazy-ass] and
-[check-more-types][check-more-types].
-
 **Advice**
 
 Put `chdir.back` into `.finally` callback to make sure it is always executed, even if there is an exception.
@@ -43,8 +40,28 @@ chdir.to('foo/bar/folder')
     .finally(chdir.back); // called
 ```
 
-[q]: https://www.npmjs.com/package/q
-[spots]: https://www.npmjs.com/package/spots
+### nextTo
+
+If you have several hops you can schedule next hop using `chdir.nextTo` which allows
+you to save extra empty function.
+
+```js
+// second hop is deferred
+chdir.to('first/folder')
+    .then(chdir.back)
+    .to(() => chdir.to('second/folder'))
+```
+
+```js
+// equivalent
+chdir.to('first/folder')
+    .then(chdir.back)
+    .to(chdir.nextTo('second/folder'))
+```
+
+Implemented using [bluebird][https://github.com/petkaantonov/bluebird], 
+[lazy-ass][lazy-ass] and [check-more-types][check-more-types].
+
 [lazy-ass]: https://www.npmjs.com/package/lazy-ass
 [check-more-types]: https://www.npmjs.com/package/check-more-types
 

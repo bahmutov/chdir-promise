@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo running unit tests",
-    "posttest": "mocha test/*-spec.js",
+    "posttest": "npm run unit",
+    "unit": "mocha test/*-spec.js",
     "demo": "DEBUG=chdir-promise node test/demo.js",
     "deps": "deps-ok && dependency-check --no-dev .",
     "semantic-release": "semantic-release",

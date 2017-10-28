@@ -38,8 +38,11 @@ const chdirTo = folderName => {
   return Promise.try(() => _to(folderName))
 }
 
+const nextTo = folderName => () => chdirTo(folderName)
+
 module.exports = {
   to: chdirTo,
   back: comeBack,
-  from: comeBack
+  from: comeBack,
+  nextTo: nextTo
 }
