@@ -49,14 +49,14 @@ you to save extra empty function.
 // second hop is deferred
 chdir.to('first/folder')
     .then(chdir.back)
-    .to(() => chdir.to('second/folder'))
+    .then(() => chdir.to('second/folder'))
 ```
 
 ```js
 // equivalent
 chdir.to('first/folder')
     .then(chdir.back)
-    .to(chdir.nextTo('second/folder'))
+    .then(chdir.nextTo('second/folder'))
 ```
 
 Implemented using [bluebird][https://github.com/petkaantonov/bluebird], 

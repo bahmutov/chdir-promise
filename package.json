@@ -9,7 +9,7 @@
     "unit": "mocha test/*-spec.js",
     "demo": "DEBUG=chdir-promise node test/demo.js",
     "deps": "deps-ok && dependency-check --no-dev .",
-    "semantic-release": "semantic-release",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post",
     "commit": "commit-wizard",
     "size": "t=\"$(npm pack .)\"; wc -c \"${t}\"; tar tvf \"${t}\"; rm \"${t}\";",
     "pretty": "prettier-standard *.js src/*.js test/*.js",
@@ -57,7 +57,7 @@
     "mocha": "^4.0.1",
     "pre-git": "3.15.3",
     "prettier-standard": "7.0.3",
-    "semantic-release": "9.0.0",
+    "semantic-release": "8.2.3",
     "standard": "10.0.3"
   },
   "config": {
